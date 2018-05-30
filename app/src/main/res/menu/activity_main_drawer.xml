@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@drawable/ic_action_shelves"
+            android:title="@string/stock_title"/>
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_report_gray"
+            android:title="@string/report_title"/>
+        <item
+            android:id="@+id/nav_promo"
+            android:icon="@drawable/ic_shop_gray"
+            android:title="@string/catalog_title"/>
+
+    </group>
+
+    <item android:title="@string/app_name">
+        <menu>
+            <item
+                android:id="@+id/nav_sync"
+                android:icon="@drawable/ic_action_sync"
+                android:title="@string/sync_title"/>
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_rate"
+                android:title="@string/rate_title"/>
+            <item
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/ic_about_us"
+                android:title="@string/about_title"/>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_setting"
+                android:title="@string/setting_title"/>
+        </menu>
+    </item>
+
+</menu>

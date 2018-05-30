@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "910724804024",
+    "firebase_url": "https://stoku-94915.firebaseio.com",
+    "project_id": "stoku-94915",
+    "storage_bucket": "stoku-94915.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910724804024:android:73988a775550e1a7",
+        "android_client_info": {
+          "package_name": "ttc.project.stoku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910724804024-inbk19flr3ujhb7cnq68ar4tkahqpopu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNs4PSaY9bmH5_Mj8uLEs9HxstPN9LJaY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

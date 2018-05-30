@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="add"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_add"
+        android:shortcutShortLabel="@string/add_item"
+        android:shortcutLongLabel="@string/add_item"
+        android:shortcutDisabledMessage="@string/add_item">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="ttc.project.stoku"
+            android:targetClass="ttc.project.stoku.activity.AddEditItemActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <!--<categories android:name="android.shortcut.conversation" -->
+            <!--/>-->
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="shoppingList"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_assignment"
+        android:shortcutShortLabel="@string/shopping_list"
+        android:shortcutLongLabel="@string/shopping_list"
+        android:shortcutDisabledMessage="@string/shopping_list">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="ttc.project.stoku"
+            android:targetClass="ttc.project.stoku.activity.ShoppingListActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <!--<categories android:name="android.shortcut.conversation" -->
+        <!--/>-->
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

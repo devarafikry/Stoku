@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AfterShoppingActivity">
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/btn_close"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_action_clear_white"
+        android:layout_margin="10dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shopping_finished"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_fileName="simple_tick.json"
+        app:lottie_autoPlay="true"/>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="MEDIUM_RECTANGLE"
+        ads:adUnitId="@string/ad_unit_finish_shopping">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

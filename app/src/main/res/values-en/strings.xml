@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">Stoku</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="error_empty_item">Please fill item name</string>
+    <string name="error_empty_cart">No purchased item</string>
+    <string name="error_empty_category">Please fill category name</string>
+
+    <string name="success_create_item">Item successfully added</string>
+    <string name="success_create_category">Category successfully added</string>
+    <string name="success_update_category">Category successfully updated</string>
+    <string name="success_delete_category">Category has been deleted</string>
+    <string name="success_update_item">Item successfully updated</string>
+    <string name="success_delete_item">Item has been deleted</string>
+    <string name="success_update_list_item">Item purchased</string>
+    <string name="success_remove_list_item">Item removed from shopping list</string>
+
+    <string name="empty_stock">You do not have any groceries data</string>
+    <string name="add_now">Add Now</string>
+    <string name="empty_list">Your shopping list is empty</string>
+    <string name="empty_report">You have no shopping history yet. Complete the shopping list to save the shopping history</string>
+    <string name="add_from_stock">Add from groceries</string>
+    <string name="back_to_top">Back to top</string>
+    <string name="catalog_date">Uploaded on %1$s</string>
+    <string name="curr_desc">Select currency</string>
+
+    <string name="activate_sync">Enable Sync</string>
+    <string name="activate_sync_message">Sync your data on other devices using the auto-backup feature. To run this feature, you need to allow auto-backup feature</string>
+
+    <string name="activate">Enable</string>
+    <string name="cancel">Cancel</string>
+    <string name="not_supported_sync">Sorry, your device does not currently support auto-backup feature</string>
+    <string name="no_connection">You are not connected to internet, make sure you are connected to a network to view promo catalog</string>
+    <string name="no_connection_short">Not connected to internet</string>
+    <string name="load_again">Reload</string>
+
+    <string name="stock_title">Groceries and Items</string>
+    <string name="report_title">Shopping History</string>
+    <string name="catalog_title">
+        Deals (Indonesia)</string>
+
+    <string name="sync_title">Sync</string>
+    <string name="about_title">About Us</string>
+    <string name="rate_title">Rate Us</string>
+    <string name="add_item_hint">Add Item...</string>
+    <string name="add_to_list">Add to Shopping List</string>
+
+    <string name="available">Full</string>
+    <string name="empty">Empty</string>
+
+    <string name="delete_item_title">Delete Item</string>
+    <string name="delete_item_message">Delete item \"%1$s\" ?</string>
+    <string name="delete">Delete</string>
+
+    <string name="edit_item">Delete Item</string>
+
+    <string name="add_new_category">Create New Category</string>
+    <string name="create">Create</string>
+
+    <string name="category">Category :</string>
+    <string name="notes">Notes :</string>
+    <string name="notes_hint">Notes (Optional)</string>
+
+    <string name="add_category_hint">Enter category name ...</string>
+    <string name="add_category">Add Category</string>
+    <string name="manage_category">Manage Category</string>
+    <string name="edit_category">Edit Category</string>
+    <string name="delete_category_title">Delete Category</string>
+    <string name="delete_category_message">Delete category \"%1$s\" ?</string>
+
+    <string name="shopping_list">Shopping List</string>
+    <string name="add_shopping_list_hint">Add shopping list...</string>
+
+    <string name="total_cost_hint">Total... (Optional)</string>
+    <string name="swipe_to_finish">SWIPE TO FINISH</string>
+
+    <string name="shopping_finished">Shopping Finished</string>
+    <string name="finish_shopping_list_confirmation">Finish shopping?</string>
+    <string name="finish_undone_confirmation">Looks like you missed some items on the shopping list, still go to finish shopping list?</string>
+    <string name="continue_option">Continue</string>
+    <string name="undefined_cost">Cost undefined</string>
+    <string name="shopping">Shopping On %1$s</string>
+    <string name="setting_title">Setting</string>
+    <string name="lang">Languange</string>
+    <string name="lang_desc">Set your languange</string>
+    <string name="stoku_about">Stoku is an application to assist you in managing your groceries
+         shopping lists, and keep your shopping history. In addition, you can also look around
+     your favorite supermarket catalog (currently in Indonesia) .</string>
+
+    <string name="no_category">Uncategorized</string>
+    <string name="curr">Currency</string>
+    <string name="start">Start</string>
+    <string name="add_item">Add Item</string>
+
+    <string name="stoku_welcome_message">
+        Manage your groceries and shopping list with Stoku!
+    </string>
+    <string name="ready_stoku">Preparing Stoku for you</string>
+    <string name="share_data_opening">Hi, here\'s my shopping list from Stoku App:</string>
+
+    <string name="save">Save</string>
+    <string name="send_to">Send shopping list to</string>
+
+    <string name="example_category_1">Groceries</string>
+    <string name="example_item_1">Vegetables</string>
+    <string name="example_notes_1">Kale, Spinach, Carrot</string>
+    <string name="example_item_2">Meat</string>
+    <string name="example_item_3">Egg</string>
+
+    <string name="example_category_2">Toiletries</string>
+    <string name="example_item_4">Toothpaste</string>
+    <string name="example_item_5">Soap</string>
+
+    <string name="cost">%1$s %2$s</string>
+
+    <string name="edit_list_item_dialog">Edit Item</string>
+
+    <string name="category_hint">Category...</string>
+    <string name="name_hint">Item Name...</string>
+    <string name="notes_dialog_hint">Notes...</string>
+    <string name="new_category_hint">New Category...</string>
+
+    <string name="edit">Edit</string>
+
+    <string name="share_data_closing">Download Stoku now: https://play.google.com/store/apps/details?id=ttc.project.stoku</string>
+    <string name="back_pressed">Press back again to leave</string>
+
+    <string name="delete_report_title">Delete Shopping History</string>
+    <string name="delete_report_message">Delete history on %1$s ?</string>
+    <string name="success_delete_report">Shopping history has been deleted</string>
+
+    <string name="donotshow">Don\'t show again</string>
+    <string name="rate">Rate</string>
+    <string name="later">Remind me later</string>
+    <string name="enjoy">If you enjoy using Stoku, please take a moment to rate it. Thanks for your support!</string>
+
+    <string name="hint_itemview">This is your grocery item, swipe to right to delete this item</string>
+    <string name="hint_switch">Change your item availability</string>
+    <string name="hint_checkbox">Select items to include it in your shopping list</string>
+    <string name="hint_drag">Move your item to another category by dragging this button</string>
+    <string name="hint_shopping_list">View your shopping list through this button</string>
+
+    <string name="got_it">GOT IT</string>
+</resources>

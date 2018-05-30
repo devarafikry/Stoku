@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/delete_icon"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_action_close" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Hapus"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/view_foreground"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/view_item_clickable"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/view_category_type"
+                android:background="@color/colorPrimary"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <CheckBox
+                android:id="@+id/cb_item"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_item_name"
+                    android:textColor="@color/colorTextPrimary"
+                    tools:text="Barang 1"
+                    android:layout_weight="4"
+                    android:textSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/tv_notes"
+                    tools:text="Barang 1"
+                    android:layout_weight="4"
+                    android:textSize="@dimen/string_note_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.github.angads25.toggle.LabeledSwitch
+            android:id="@+id/switch_available"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:textSize="14dp"
+            app:on="false"
+            app:colorBorder="@color/colorAccent"/>
+        <ImageView
+            android:id="@+id/btn_drag"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_drag"/>
+    </LinearLayout>
+</FrameLayout>

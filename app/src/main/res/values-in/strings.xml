@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">Stoku</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="error_empty_item">Mohon isi nama barang terlebih dahulu</string>
+    <string name="error_empty_cart">Tidak ada daftar belanja yang dibeli</string>
+    <string name="error_empty_category">Mohon isi nama kategori terlebih dahulu</string>
+
+    <string name="success_create_item">Barang berhasil ditambahkan</string>
+    <string name="success_create_category">Kategori berhasil ditambahkan</string>
+    <string name="success_update_category">Kategori telah update</string>
+    <string name="success_delete_category">Kategori telah dihapus</string>
+    <string name="success_update_item">Barang telah update</string>
+    <string name="success_delete_item">Barang telah dihapus</string>
+    <string name="success_update_list_item">Barang telah dibeli</string>
+    <string name="success_remove_list_item">Barang dihapus dari daftar belanja</string>
+
+    <string name="empty_stock">Anda belum memiliki data barang persediaan</string>
+    <string name="add_now">Tambahkan Sekarang</string>
+    <string name="empty_list">Daftar belanja anda kosong</string>
+    <string name="empty_report">Anda belum memiliki laporan pembelian. Selesaikan daftar belanja untuk menyimpan laporan pembelian</string>
+    <string name="add_from_stock">Tambahkan dari persediaan</string>
+    <string name="back_to_top">Kembali Ke Atas</string>
+    <string name="catalog_date">Ditulis pada %1$s</string>
+
+
+    <string name="activate_sync">Aktifkan Sinkronisasi</string>
+    <string name="activate_sync_message">Sinkronisasi data anda di perangkat lain menggunakan fitur auto-backup. Untuk menjalankan fitur ini, anda perlu mengizinkan fitur auto-backup</string>
+
+    <string name="activate">Aktifkan</string>
+    <string name="cancel">Batal</string>
+    <string name="not_supported_sync">Maaf, perangkat anda untuk saat ini belum mendukung fitur auto-backup</string>
+    <string name="no_connection">Anda tidak terhubung ke jaringan Internet, pastikan anda telah terkoneksi ke jaringan internet untuk melihat katalog promo</string>
+    <string name="no_connection_short">Tidak terhubung ke jaringan Internet</string>
+    <string name="load_again">Muat Ulang</string>
+
+    <string name="save">Simpan</string>
+    <string name="stock_title">Persediaan</string>
+    <string name="report_title">Riwayat Belanja</string>
+    <string name="catalog_title">Katalog Promo</string>
+
+    <string name="sync_title">Sinkronisasi</string>
+    <string name="about_title">Tentang Kami</string>
+    <string name="rate_title">Nilai Stoku</string>
+    <string name="add_item_hint">Tambah barang...</string>
+    <string name="add_to_list">Tambah ke daftar</string>
+
+    <string name="available">Tersedia</string>
+    <string name="empty">Habis</string>
+
+    <string name="delete_item_title">Hapus Barang</string>
+    <string name="delete_item_message">Hapus barang \"%1$s\" ?</string>
+    <string name="delete">Hapus</string>
+
+    <string name="edit_item">Edit Barang</string>
+
+    <string name="add_new_category">Tambah Kategori Baru</string>
+    <string name="create">Buat</string>
+
+    <string name="category">Kategori :</string>
+    <string name="notes">Catatan :</string>
+    <string name="notes_hint">Catatan (Opsional)</string>
+
+    <string name="add_category_hint">Masukkan nama kategori...</string>
+    <string name="add_category">Tambahkan Kategori</string>
+    <string name="manage_category">Kelola Kategori</string>
+    <string name="edit_category">Edit Kategori</string>
+    <string name="delete_category_title">Hapus Kategori</string>
+    <string name="delete_category_message">Hapus kategori \"%1$s\" ?</string>
+
+    <string name="shopping_list">Daftar Belanja</string>
+    <string name="add_shopping_list_hint">Tambah daftar belanja...</string>
+
+    <string name="total_cost_hint">Total belanja... (Opsional)</string>
+    <string name="swipe_to_finish">GESER UNTUK SELESAI</string>
+
+    <string name="shopping_finished">Belanja Selesai</string>
+    <string name="finish_shopping_list_confirmation">Selesaikan daftar belanja?</string>
+    <string name="finish_undone_confirmation">Sepertinya kamu melewatkan beberapa barang di daftar belanja, tetap lanjut untuk selesaikan daftar belanja?</string>
+    <string name="continue_option">Lanjutkan</string>
+    <string name="undefined_cost">Biaya tidak ditentukan</string>
+    <string name="shopping">Belanja %1$s</string>
+    <string name="setting_title">Pengaturan</string>
+
+    <string name="stoku_about">Stoku adalah aplikasi untuk membantu anda dalam mengelola ketersediaan barang-barang kebutuhan sehari-hari,
+        membuat daftar belanja berdasarkan barang-barang anda, dan menyimpan riwayat belanja anda. Selain itu, anda juga dapat melihat-lihat
+    katalog promo swalayan favorit anda.</string>
+
+    <string name="lang">Bahasa</string>
+    <string name="lang_desc">Pilih bahasa</string>
+    <string name="curr">Mata Uang</string>
+    <string name="curr_desc">Pilih mata uang</string>
+
+
+    <string name="add_item">Tambah Barang</string>
+
+
+    <string name="cost">%1$s %2$s</string>
+
+
+
+
+    <string name="stoku_welcome_message">
+        Kelola kebutuhan sehari-hari anda dengan Stoku!
+    </string>
+
+    <string name="start">Mulai</string>
+
+
+    <string name="no_category">Tidak Terkategori</string>
+
+
+    <string name="ready_stoku">Menyiapkan Stoku untuk anda</string>
+
+    <string name="share_data_opening">Hai, ini list belanja saya dari Stoku App :</string>
+
+    <string name="send_to">Kirim daftar belanja ke</string>
+
+    <string name="edit_list_item_dialog">Edit Barang</string>
+
+    <string name="category_hint">Kategori...</string>
+    <string name="name_hint">Nama Barang...</string>
+    <string name="notes_dialog_hint">Notes...</string>
+    <string name="new_category_hint">Kategori Baru...</string>
+
+    <string name="edit">Edit</string>
+
+    <string name="example_category_1">Bahan Masak</string>
+    <string name="example_item_1">Sayuran</string>
+    <string name="example_notes_1">Kangkung, Bayam, Wortel</string>
+    <string name="example_item_2">Daging</string>
+    <string name="example_item_3">Telur</string>
+
+    <string name="example_category_2">Peralatan Mandi</string>
+    <string name="example_item_4">Pasta Gigi</string>
+    <string name="example_item_5">Sabun</string>
+
+    <string name="share_data_closing">Download Stoku di: https://play.google.com/store/apps/details?id=ttc.project.stoku</string>
+    <string name="back_pressed">Tekan tombol BACK lagi untuk keluar</string>
+
+    <string name="delete_report_title">Hapus Riwayat Belanja</string>
+    <string name="delete_report_message">Hapus riwayat belanja pada %1$s ?</string>
+
+    <string name="success_delete_report">Riwayat belanja telah dihapus</string>
+
+    <string name="donotshow">Jangan tampilkan lagi</string>
+    <string name="rate">Nilai</string>
+    <string name="later">Ingatkan lagi nanti</string>
+    <string name="enjoy">Terbantu dengan Stoku? Bagi pengalaman anda dengan menilai kami di PlayStore!</string>
+
+    <string name="hint_itemview">Ini adalah barang keperluan sehari-hari anda, anda dapat menggeser ke kanan untuk menghapus barang anda</string>
+    <string name="hint_switch">Ubah status ketersediaan barang anda</string>
+    <string name="hint_checkbox">Pilih barang keperluan yang ingin dimasukkan ke daftar belanja</string>
+    <string name="hint_drag">Pindahkan barang anda ke ketegori lain dengan menggeser tombol ini</string>
+    <string name="hint_shopping_list">Lihat daftar belanja anda melalui tombol ini</string>
+
+    <string name="got_it">MENGERTI</string>
+</resources>

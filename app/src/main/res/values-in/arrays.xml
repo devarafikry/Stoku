@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currencies">
+        <item>IDR</item>
+        <item>USD</item>
+    </string-array>
+
+    <string-array name="currencies_value">
+        <item>@string/val_IDR</item>
+        <item>@string/val_USD</item>
+    </string-array>
+
+    <string-array name="units">
+        <item>Unit</item>
+        <item>kg</item>
+        <item>g</item>
+        <item>l</item>
+        <item>ml</item>
+    </string-array>
+
+    <string-array name="languange_value">
+        <item>@string/val_ID</item>
+        <item>@string/val_EN</item>
+    </string-array>
+
+    <!--<string-array name="languange">-->
+        <!--<item>@string/lang_ID</item>-->
+        <!--<item>@string/lang_EN</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="currency_value">-->
+        <!--<item>@string/val_IDR</item>-->
+        <!--<item>@string/val_USD</item>-->
+    <!--</string-array>-->
+
+    <string-array name="languange">
+        <item>@string/lang_ID</item>
+        <item>@string/lang_EN</item>
+    </string-array>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view_category_type"
+            android:background="@color/colorPrimary"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:id="@+id/tv_category_name"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            tools:text="Barang 1"
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:backgroundTint="@color/colorAccent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_edit_white"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:backgroundTint="@color/colorAccent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+</LinearLayout>
