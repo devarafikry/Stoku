@@ -93,17 +93,45 @@ public class CatalogDetailActivity extends BaseActivity {
         protected Bitmap doInBackground(String... endpoint) {
             try {
                 String endp = endpoint[0];
-                Document doc = Jsoup.connect(endp).get();
+                Document doc = Jsoup
+                        .connect(endp)
+                        .userAgent("Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 Chrome/120 Mobile Safari/537.36")
+                        .timeout(15000)
+                        .followRedirects(true)
+                        .get();
 
-                Element article = doc.select("article").first();
-                Element image = article.select("img").first();
-                String imgs_1 = image.attr("abs:srcset");
-                String[] imgs_2 = imgs_1.split(",");
-                String link = imgs_2[0].substring(0, imgs_2[0].length()-5);
+                Element article = doc.selectFirst("article");
+                if (article == null) {
+                    return null;
+                }
 
-                Bitmap bitmap = Picasso.get().load(link).networkPolicy(NetworkPolicy.NO_CACHE, NetworkPolicy.NO_STORE).memoryPolicy(MemoryPolicy.NO_CACHE,MemoryPolicy.NO_STORE).get();
+                // The site lazy-loads images with WP-Rocket: real URL is on
+                // data-lazy-src, the src attribute holds an inline svg placeholder.
+                // Walk the article's <img> tags and return the first one whose
+                // resolved URL is an actual http(s) image.
+                String link = null;
+                for (Element img : article.select("img")) {
+                    String url = img.absUrl("data-lazy-src");
+                    if (TextUtils.isEmpty(url)) {
+                        url = img.absUrl("data-src");
+                    }
+                    if (TextUtils.isEmpty(url)) {
+                        url = img.absUrl("src");
+                    }
+                    if (!TextUtils.isEmpty(url) && !url.startsWith("data:")) {
+                        link = url;
+                        break;
+                    }
+                }
+                if (link == null) {
+                    return null;
+                }
 
-                return bitmap;
+                return Picasso.get()
+                        .load(link)
+                        .networkPolicy(NetworkPolicy.NO_CACHE, NetworkPolicy.NO_STORE)
+                        .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
+                        .get();
             } catch (IOException e) {
                 e.printStackTrace();
             }
