@@ -2,7 +2,7 @@ package ttc.project.stoku.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public class ListItem implements Parcelable, Comparable<ListItem> {
     int category_color;
