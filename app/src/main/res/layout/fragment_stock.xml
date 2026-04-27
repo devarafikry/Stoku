@@ -51,14 +51,14 @@
             </LinearLayout>
         </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_items"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:paddingBottom="60dp">
 
-        </android.support.v7.widget.RecyclerView>
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
     <FrameLayout
         android:layout_marginTop="?android:actionBarSize"
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </FrameLayout>
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_shop"
         android:visibility="visible"
         android:layout_width="wrap_content"

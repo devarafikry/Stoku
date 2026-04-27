@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ttc.project.stoku">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name=".MyApplication"
@@ -12,49 +12,54 @@
         android:roundIcon="@mipmap/ic_launcher_circle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/mobile_app_id"/>
+
         <activity
             android:name=".activity.MainActivity"
+            android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-
-        </activity>
-        <activity android:name=".activity.ManageCategoryActivity">
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".activity.ManageCategoryActivity"
+            android:exported="false"/>
         <activity
             android:name=".activity.AddEditCategoryActivity"
+            android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan">
-        </activity>
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".activity.AddEditItemActivity"
-            android:windowSoftInputMode="adjustPan">
-        </activity>
-        <activity android:name=".activity.DetailReportActivity">
-        </activity>
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".activity.DetailReportActivity"
+            android:exported="false"/>
         <activity
             android:name=".activity.ShoppingListActivity"
+            android:exported="false"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
-            android:noHistory="true">
-        </activity>
+            android:noHistory="true"/>
         <activity
             android:name=".activity.AfterShoppingActivity"
+            android:exported="false"
             android:noHistory="true"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".activity.ReportDetailActivity">
-        </activity>
-        <activity android:name=".activity.PromoListActivity">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.ReportDetailActivity"
+            android:exported="false"/>
+        <activity android:name=".activity.PromoListActivity"
+            android:exported="false"/>
         <activity
             android:name=".activity.CatalogDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".activity.AboutActivity">
-        </activity>
-        <activity android:name=".activity.SettingActivity">
-        </activity>
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.AboutActivity"
+            android:exported="false"/>
+        <activity android:name=".activity.SettingActivity"
+            android:exported="false"/>
         <activity android:name=".activity.FirstActivity"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:noHistory="true">
             <intent-filter>
