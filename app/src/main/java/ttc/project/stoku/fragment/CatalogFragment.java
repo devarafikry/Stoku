@@ -16,6 +16,7 @@ import androidx.loader.content.AsyncTaskLoader;
 import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -180,55 +181,50 @@ public class CatalogFragment extends Fragment implements CatalogInterface, Loade
             public ArrayList<Catalog> loadInBackground() {
                 try {
                     String pg = args.getString(BUNDLE_PAGE);
-                    Document doc = Jsoup.connect("http://katalogpromosi.com/category/pasar-swalayan/page/"+pg).get();
+                    Document doc = Jsoup
+                            .connect("https://katalogpromosi.com/pasar-swalayan/page/" + pg + "/")
+                            .userAgent("Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 Chrome/120 Mobile Safari/537.36")
+                            .timeout(15000)
+                            .followRedirects(true)
+                            .get();
+
                     Elements elements = doc.select("article.post");
-                    ArrayList<String> titles = new ArrayList<>();
-                    for (Element element : elements){
-                        Element title = element.select("h3.loop-title").first();
-                        titles.add(title.text());
-                    }
-
-                    ArrayList<String> images = new ArrayList<>();
-                    for (Element element : elements){
-                        Element thumb = element.select("div.loop-thumb").first();
-                        Element image = thumb.select("img").first();
-                        if(image == null){
-                            return null;
+                    ArrayList<Catalog> catalogs = new ArrayList<>();
+                    for (Element element : elements) {
+                        Element titleAnchor = element.selectFirst("h3.entry-title a");
+                        if (titleAnchor == null) {
+                            continue;
                         }
-                        String imgs_1 = image.attr("abs:srcset");
-                        String[] imgs_2 = imgs_1.split(",");
-                        String link = imgs_2[0].substring(0, imgs_2[0].length()-5);
-                        images.add(link);
-                    }
+                        String title = titleAnchor.text();
+                        String endpoint = titleAnchor.absUrl("href");
 
-                    ArrayList<String> endpoints = new ArrayList<>();
-                    for (Element element : elements){
-                        Element a = element.select("a").first();
-                        endpoints.add(a.attr("abs:href"));
-                    }
+                        Element image = element.selectFirst("img.wp-post-image");
+                        if (image == null) {
+                            continue;
+                        }
+                        // The site uses WP-Rocket lazy-load: real image is on
+                        // data-lazy-src; src holds an inline svg placeholder.
+                        String imageUrl = image.absUrl("data-lazy-src");
+                        if (TextUtils.isEmpty(imageUrl)) {
+                            imageUrl = image.absUrl("data-src");
+                        }
+                        if (TextUtils.isEmpty(imageUrl)) {
+                            imageUrl = image.absUrl("src");
+                        }
 
-                    ArrayList<String> dates = new ArrayList<>();
-                    for (Element element : elements){
-                        Element header = element.select("header.loop-data").first();
-                        Element p = header.select("p.meta").first();
-                        Element atext = p.select("a").first();
-
+                        Element dateAnchor = element.selectFirst("span.entry-meta-date a");
+                        String dateText = dateAnchor != null ? dateAnchor.text() : "";
                         String date;
-                        if(getActivity() != null){
+                        if (getActivity() != null) {
                             date = String.format(
                                     getResources().getString(R.string.catalog_date),
-                                    atext.text()
+                                    dateText
                             );
-                        } else{
-                            date = "null";
+                        } else {
+                            date = dateText;
                         }
-                        dates.add(date);
-                    }
 
-                    ArrayList<Catalog> catalogs = new ArrayList<>();
-                    for (int i =0;i<elements.size();i++){
-                        Catalog catalog = new Catalog(titles.get(i), images.get(i), endpoints.get(i), dates.get(i));
-                        catalogs.add(catalog);
+                        catalogs.add(new Catalog(title, imageUrl, endpoint, date));
                     }
                     return catalogs;
                 } catch (IOException e) {
